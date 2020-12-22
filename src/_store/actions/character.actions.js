@@ -18,17 +18,14 @@ function failure(error) {
   return {type: characterConstants.ERROR_FETCHING, error};
 }
 
-function fetchAll(page = 0) {
+function fetchAll() {
   return (dispatch) => {
     dispatch(loading());
     return api.characters
-      .fetchAll(page)
+      .fetchAll()
       .then(results => {
         // update Store
-        dispatch(success({
-          data: results.data,
-          currentPage: page,
-        }));
+        dispatch(success(results.data));
       })
       .catch(error => {
         dispatch(failure(error));

@@ -4,7 +4,6 @@ import {characterConstants} from '../contants';
 const INITIAL_STATE = {
   loading: false,
   data: [],
-  currentPage: 0,
 };
 
 export function characters(state = INITIAL_STATE, action) {
@@ -16,8 +15,7 @@ export function characters(state = INITIAL_STATE, action) {
     case characterConstants.FETCH_ALL:
       return {
         ...state,
-        data: action.payload.data,
-        currentPage: action.payload.currentPage,
+        data: action.payload,
         loading: false,
       };
     case characterConstants.ERROR_FETCHING:
