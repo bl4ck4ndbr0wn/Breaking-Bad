@@ -3,10 +3,13 @@ import axios from 'axios/index';
 // Backend API URL
 export const API_HOST = 'https://www.breakingbadapi.com/api';
 
+const joinString = (value) => `name=${value.split(' ').join('+')}`;
+
 export const api = {
   characters: {
     fetchAll: () => axios.get(`${API_HOST}/characters`),
     fetchById: id => axios.get(`${API_HOST}/characters/${id}`),
+    fetchByName: value => axios.get(`${API_HOST}/characters?${joinString(value)}`),
   },
   quotes: {
     fetchAll: () => axios.get(`${API_HOST}/quotes`),

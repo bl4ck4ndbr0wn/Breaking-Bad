@@ -41,6 +41,7 @@ const Home = (props) => {
     return data.filter((feed) => feed.category.indexOf(category) > -1);
   }
 
+  console.log(props)
   return (
     <>
       <main className="mb-auto my-8">
@@ -64,7 +65,7 @@ const Home = (props) => {
           </div>
 
           <div
-            className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+            className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-6">
 
             {characters.loading ?
               new Array(4).fill(
@@ -73,8 +74,8 @@ const Home = (props) => {
                     <div className="h-full border-2 border-gray-100 rounded-lg overflow-hidden">
                       <div className="lg:h-48 bg-gray-400 md:h-36 w-full object-cover object-center"/>
                       <div className="p-6">
-                        <h1 className="w-1/2 mb-4 h-6 animate-pulse bg-gray-500"/>
-                        <h2 className="bg-gray-400 animate-pulse h-4 w-1/4 mb-2"/>
+                        <h1 className="w-1/2 mb-4 h-6 animate-pulse bg-gray-500">.</h1>
+                        <h2 className="bg-gray-400 animate-pulse h-4 w-1/4 mb-2">.</h2>
                       </div>
                     </div>
                   </div>

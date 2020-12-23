@@ -4,6 +4,7 @@ import {characterConstants} from '../contants';
 
 export const characterActions = {
   fetchAll,
+  fetchByName,
 };
 
 function loading() {
@@ -23,6 +24,22 @@ function fetchAll() {
     dispatch(loading());
     return api.characters
       .fetchAll()
+      .then(results => {
+        // update Store
+        dispatch(success(results.data));
+      })
+      .catch(error => {
+        dispatch(failure(error));
+      });
+  };
+}
+
+
+function fetchByName(value = '') {
+  return (dispatch) => {
+    dispatch(loading());
+    return api.characters
+      .fetchByName(value)
       .then(results => {
         // update Store
         dispatch(success(results.data));

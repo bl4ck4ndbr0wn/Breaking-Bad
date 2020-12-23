@@ -1,7 +1,18 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {characterActions} from '../../_store/actions/character.actions';
+import CharacterFeed from '../Character/CharacterFeed';
 
 
 const Search = (props) => {
+  const [value, setValue] = useState('');
+  const dispatch = useDispatch();
+
+  function handleChange(e) {
+    setValue(e.target.value);
+    dispatch(characterActions.fetchByName(e.target.value))
+  }
 
   return (
     <>
@@ -17,7 +28,11 @@ const Search = (props) => {
 
           <input
             className="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline"
-            type="text" placeholder="Search"/>
+            type="text"
+            placeholder="Search"
+            onChange={(e) => handleChange(e)}
+            value={value}
+          />
         </div>
       </div>
     </>
