@@ -1,4 +1,5 @@
 import {characterConstants} from './character.constants';
+import {quotesConstants} from './quotes.constants';
 
 
-export {characterConstants};
+export {characterConstants, quotesConstants};

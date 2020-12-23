@@ -1,0 +1,5 @@
+export const quotesConstants = {
+  LOADING: 'QUOTES_LOADING',
+  FETCH_ALL: 'FETCH_ALL_QUOTES',
+  ERROR_FETCHING: 'ERROR_FETCHING_QUOTES',
+};

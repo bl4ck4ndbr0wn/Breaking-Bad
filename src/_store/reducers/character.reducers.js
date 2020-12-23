@@ -18,6 +18,12 @@ export function characters(state = INITIAL_STATE, action) {
         data: action.payload,
         loading: false,
       };
+    case characterConstants.FETCH_ONE:
+      return {
+        ...state,
+        data: action.payload,
+        loading: false,
+      };
     case characterConstants.ERROR_FETCHING:
       return INITIAL_STATE;
     default:

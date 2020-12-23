@@ -2,7 +2,9 @@ import {connectRouter} from 'connected-react-router';
 import {combineReducers} from 'redux';
 
 import history from '../../utils/history';
+
 import {characters} from './character.reducers';
+import {quotes} from './quotes.redeucers';
 
 
 /**
@@ -13,6 +15,7 @@ export default function createReducer(injectedReducers = {}) {
   return combineReducers({
     /* Add different redux states. */
     characters,
+    quotes,
 
     router: connectRouter(history),
     ...injectedReducers,

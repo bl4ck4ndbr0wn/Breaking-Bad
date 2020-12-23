@@ -12,8 +12,10 @@ function App() {
   function getRoutes(routes) {
     return routes.map((prop, key) => {
       return <Route
+        exact
         path={('', prop.path)}
-        component={prop.component} key={key}
+        component={prop.component}
+        key={key}
       />;
     });
   }

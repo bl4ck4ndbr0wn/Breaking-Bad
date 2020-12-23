@@ -41,7 +41,6 @@ const Home = (props) => {
     return data.filter((feed) => feed.category.indexOf(category) > -1);
   }
 
-  console.log(props)
   return (
     <>
       <main className="mb-auto my-8">

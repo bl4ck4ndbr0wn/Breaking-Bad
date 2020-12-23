@@ -29,7 +29,7 @@ const Search = (props) => {
           <input
             className="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Search"
+            placeholder="Search character by name"
             onChange={(e) => handleChange(e)}
             value={value}
           />

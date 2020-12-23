@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
 const CharacterFeed = (props) => {
@@ -10,7 +11,7 @@ const CharacterFeed = (props) => {
 
     return (
       <>
-        <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden" key={key}>
+        <Link to={`/characters/${character.char_id}`} className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden" key={key}>
           <div className="flex items-end justify-end h-56 w-full bg-cover"
                style={{backgroundImage: `url(${character.img})`}}>
           </div>
@@ -64,7 +65,7 @@ const CharacterFeed = (props) => {
             </div>
 
           </div>
-        </div>
+        </Link>
       </>
     );
   });

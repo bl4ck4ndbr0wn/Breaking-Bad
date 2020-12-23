@@ -40,11 +40,11 @@ const Header = (props) => {
           </div>
           <nav className={classNames('sm:flex sm:justify-center sm:items-center mt-4', {'hidden': !isOpen})}>
             <div className="flex flex-col sm:flex-row items-center">
-              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="#">Home</Link>
-              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="#">Quotes</Link>
-              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="#">Categories</Link>
-              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="#">Contact</Link>
-              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="#">About</Link>
+              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="/">Home</Link>
+              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="/">Quotes</Link>
+              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="/">Categories</Link>
+              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="/">Contact</Link>
+              <Link className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" to="/">About</Link>
             </div>
           </nav>
         </div>
