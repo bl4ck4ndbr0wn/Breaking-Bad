@@ -4,6 +4,7 @@
 import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
 import createReducer from './reducers';
 
+
 export default function appStore(initialState = {}) {
   return configureStore({
     reducer: createReducer(),

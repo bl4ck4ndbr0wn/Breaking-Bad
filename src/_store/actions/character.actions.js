@@ -35,7 +35,6 @@ function fetchAll() {
   };
 }
 
-
 function fetchByName(value = '') {
   return (dispatch) => {
     dispatch(loading());

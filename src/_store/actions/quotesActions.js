@@ -34,7 +34,6 @@ function fetchAll() {
   };
 }
 
-
 function fetchByAuthor(author) {
   return (dispatch) => {
     dispatch(loading());

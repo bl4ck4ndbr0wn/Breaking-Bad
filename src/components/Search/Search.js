@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {characterActions} from '../../_store/actions/character.actions';
-import CharacterFeed from '../Character/CharacterFeed';
 
 
 const Search = (props) => {
@@ -11,7 +9,7 @@ const Search = (props) => {
 
   function handleChange(e) {
     setValue(e.target.value);
-    dispatch(characterActions.fetchByName(e.target.value))
+    dispatch(characterActions.fetchByName(e.target.value));
   }
 
   return (

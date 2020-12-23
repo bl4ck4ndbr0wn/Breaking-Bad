@@ -11,7 +11,8 @@ const CharacterFeed = (props) => {
 
     return (
       <>
-        <Link to={`/characters/${character.char_id}`} className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden" key={key}>
+        <Link to={`/characters/${character.char_id}`}
+              className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden" key={key}>
           <div className="flex items-end justify-end h-56 w-full bg-cover"
                style={{backgroundImage: `url(${character.img})`}}>
           </div>

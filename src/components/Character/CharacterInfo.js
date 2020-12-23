@@ -77,7 +77,8 @@ const CharacterInfo = (props) => {
 
       </div>
 
-      <h3 className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Breaking
+      <h3
+        className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Breaking
         Bad</h3>
       <div className="flex flex-wrap mt-2 justify-center">
         {character.appearance.map((season) => (
@@ -89,7 +90,9 @@ const CharacterInfo = (props) => {
           </div>
         ))}
       </div>
-      <h3 className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Better Call Saul</h3>
+      <h3
+        className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Better
+        Call Saul</h3>
       <div className="flex flex-wrap mt-2 justify-center">
         {character.better_call_saul_appearance.length > 0 ? character.better_call_saul_appearance.map((season) => (
           <div className="m-3">
