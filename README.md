@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Breaking Bad 
+The Breaking Bad app is a collection of information on the Vince Gilligan series Breaking Bad, as well as his incredible spin-off Better Call Saul. 
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
