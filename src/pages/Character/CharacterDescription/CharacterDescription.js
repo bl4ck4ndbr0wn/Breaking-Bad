@@ -14,7 +14,7 @@ const CharacterDescription = (props) => {
     const {id} = props.match.params;
     if (!id) props.history.push('/');
     dispatch(characterActions.fetchById(id));
-  }, [dispatch]);
+  }, [dispatch, props.history, props.match.params]);
 
   return (
     <>

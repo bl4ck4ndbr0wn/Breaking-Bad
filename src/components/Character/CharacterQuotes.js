@@ -15,7 +15,7 @@ const CharacterQuotes = (props) => {
 
   useEffect(() => {
     dispatch(quotesActions.fetchByAuthor(character.name));
-  }, [dispatch, character]);
+  }, [dispatch, character.name]);
 
   function handlePageClick({selected: selectedPage}) {
     setCurrentPage(selectedPage);
