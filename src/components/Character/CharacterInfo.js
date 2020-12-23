@@ -81,14 +81,21 @@ const CharacterInfo = (props) => {
         className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Breaking
         Bad</h3>
       <div className="flex flex-wrap mt-2 justify-center">
-        {character.appearance.map((season) => (
+        {character.appearance !== null? character.appearance.map((season) => (
           <div className="m-3">
-            <a href="https://www.facebook.com/QuickToolz" title="Quicktoolz On Facebook"
+            <div
                className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
               <span className="mx-auto">{season}</span>
-            </a>
+            </div>
           </div>
-        ))}
+        )):
+          <div className="m-3">
+            <div
+               className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+              <span className="mx-auto">None</span>
+            </div>
+          </div>
+        }
       </div>
       <h3
         className='text-center text-lg md:text-2xl mt-6 text-green-600 tracking-tight leading-10 sm:leading-none'>Better
@@ -96,16 +103,16 @@ const CharacterInfo = (props) => {
       <div className="flex flex-wrap mt-2 justify-center">
         {character.better_call_saul_appearance.length > 0 ? character.better_call_saul_appearance.map((season) => (
           <div className="m-3">
-            <a href="https://www.facebook.com/QuickToolz" title="Quicktoolz On Facebook"
+            <div
                className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
               <span className="mx-auto">{season}</span>
-            </a>
+            </div>
           </div>
         )) : <div className="m-3">
-          <a href="https://www.facebook.com/QuickToolz" title="Quicktoolz On Facebook"
+          <div
              className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
             <span className="mx-auto">None</span>
-          </a>
+          </div>
         </div>
         }
       </div>
